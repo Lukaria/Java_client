@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TreeView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.AdminWindowController">
+   <children>
+      <TableView fx:id="UserTable" prefHeight="400.0" prefWidth="900.0" visible="false">
+         <columns>
+            <TableColumn fx:id="userID" prefWidth="140.0" text="ID" />
+            <TableColumn fx:id="userLogin" prefWidth="152.0" text="Логин" />
+            <TableColumn fx:id="userPassword" prefWidth="152.0" text="Пароль" />
+            <TableColumn fx:id="userName" prefWidth="152.0" text="Имя" />
+            <TableColumn fx:id="userEmail" prefWidth="152.0" text="Почта" />
+            <TableColumn fx:id="userRole" prefWidth="152.0" text="Роль" />
+         </columns>
+      </TableView>
+      <TableView fx:id="CurrencyTable" prefHeight="400.0" prefWidth="900.0">
+        <columns>
+          <TableColumn fx:id="currencyID" prefWidth="140.0" text="ID" />
+          <TableColumn fx:id="currencyCode" prefWidth="190.0" text="Код" />
+            <TableColumn fx:id="currencyAbbreviation" prefWidth="190.0" text="Сокращение" />
+            <TableColumn fx:id="currencySymbol" prefWidth="190.0" text="Символ" />
+            <TableColumn fx:id="currencyCoeff" prefWidth="190.0" text="Коэффициент" />
+        </columns>
+      </TableView>
+      <Pane layoutY="400.0" prefHeight="200.0" prefWidth="900.0" style="-fx-background-color: #6d369f;">
+         <children>
+            <TextField fx:id="textField1" layoutX="16.0" layoutY="29.0" />
+            <TextField fx:id="textField2" layoutX="180.0" layoutY="29.0" />
+            <TextField fx:id="textField3" layoutX="346.0" layoutY="29.0" />
+            <Button fx:id="addButton" layoutX="123.0" layoutY="81.0" mnemonicParsing="false" onAction="#AddButtonClicked" prefHeight="40.0" prefWidth="98.0" style="-fx-background-color: #80ce50;" text="Добавить" />
+            <Button fx:id="updateButton" layoutX="287.0" layoutY="81.0" mnemonicParsing="false" onAction="#UpdateButtonClicked" prefHeight="40.0" prefWidth="98.0" style="-fx-background-color: #f9b331;" text="Редактировать" />
+            <Button fx:id="deleteButton" layoutX="453.0" layoutY="81.0" mnemonicParsing="false" onAction="#DeleteButtonClicked" prefHeight="40.0" prefWidth="98.0" style="-fx-background-color: #f26065;" text="Удалить" />
+            <ChoiceBox fx:id="choiceBox" layoutX="701.0" layoutY="29.0" prefWidth="150.0" />
+            <Button fx:id="filterButton" layoutX="198.0" layoutY="141.0" mnemonicParsing="false" onAction="#FilterButtonClicked" prefHeight="40.0" prefWidth="98.0" style="-fx-background-color: #c7c3c2;" text="Возрастание" />
+            <Text fx:id="errortext" fill="RED" layoutX="16.0" layoutY="73.0" strokeType="OUTSIDE" strokeWidth="0.0" text="errorText" textAlignment="CENTER" wrappingWidth="639.1521911621094">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Text>
+            <Button fx:id="fileButton" layoutX="373.0" layoutY="141.0" mnemonicParsing="false" onAction="#FileButtonClicked" prefHeight="40.0" prefWidth="110.0" style="-fx-background-color: #c7c3c2;" text="Записать в файл" />
+            <TextField fx:id="textField4" layoutX="505.0" layoutY="29.0" />
+         </children></Pane>
+      <TreeView fx:id="UserTree" prefHeight="400.0" prefWidth="900.0" visible="false" />
+   </children>
+</AnchorPane>

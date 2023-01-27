@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="1540.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <ToolBar fx:id="toolbar" prefHeight="100.0" prefWidth="1540.0" style="-fx-background-color: #4545e0;">
+         <items>
+            <Button fx:id="toolbarInfo" mnemonicParsing="false" onAction="#InfoButtonClicked" prefHeight="100.0" prefWidth="130.0" style="-fx-background-color: #4545e0; -fx-border-color: white;" text="Справка" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Button>
+            <Pane prefHeight="100.0" prefWidth="219.0" />
+            <Button fx:id="liquidityButton" mnemonicParsing="false" onAction="#LiquidityButtonClicked" prefHeight="100.0" prefWidth="220.0" style="-fx-background-color: #4545e0; -fx-border-color: white;" text="Ликвидность" textFill="WHITE">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Button>
+            <Button fx:id="profitButton" mnemonicParsing="false" onAction="#ProfitButtonClicked" prefHeight="100.0" prefWidth="220.0" style="-fx-background-color: #4545e0; -fx-border-color: white;" text="Рентабельность" textFill="WHITE">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Button>
+            <Pane prefHeight="100.0" prefWidth="200.0" />
+            <ChoiceBox fx:id="toolbarCompanies" prefHeight="100.0" prefWidth="180.0" style="-fx-border-color: white; -fx-background-color: #4545e0;" />
+            <Label fx:id="toolbarUsername" prefHeight="35.0" prefWidth="146.0" text="| Username" textFill="WHITE">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Button fx:id="toolbarAccount" mnemonicParsing="false" onAction="#AccountButtonClicked" prefHeight="100.0" prefWidth="170.0" style="-fx-background-color: #4545e0; -fx-border-color: white;" text="Аккаунт" textFill="WHITE">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Button>
+         </items>
+      </ToolBar>
+   </children>
+</AnchorPane>

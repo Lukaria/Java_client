@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<ScrollPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" vvalue="1.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/19">
+  <content>
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="800.0" prefWidth="584.0">
+         <children>
+            <Text layoutX="3.0" layoutY="24.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: bold;" text="Лента меню" textAlignment="CENTER" wrappingWidth="582.1367607116699">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Text>
+            <Text layoutX="3.0" layoutY="48.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Нажмите &quot;Аккаунт&quot;, чтобы перейти в аккаунт пользователя, где можно редактировать информацию о себе, а также создавать, редактировать и удалять компании." textAlignment="JUSTIFY" wrappingWidth="582.9367485046387">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Text>
+            <Text layoutX="3.0" layoutY="96.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Нажмите на название компании справа от имени пользователя, чтобы сменить компанию для работы. Компанию можно сменить в любой момент." textAlignment="JUSTIFY" wrappingWidth="582.1368217468262">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Text>
+            <Text layoutX="3.0" layoutY="141.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Нажмите &quot;Рентабельность&quot;, чтобы перейти в окно для расчета показателей рентабельности текущей компании." textAlignment="JUSTIFY" wrappingWidth="582.1367607116699">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Text>
+            <Text layoutX="5.0" layoutY="188.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Нажмите &quot;Ликвидность&quot;, чтобы перейти в окно для расчета показателей ликвидности текущей компании." textAlignment="JUSTIFY" wrappingWidth="578.9738273620605">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Text>
+            <Text layoutX="3.0" layoutY="232.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: bold;" text="Добавление, редактирование, удаление" textAlignment="CENTER" wrappingWidth="579.7367362976074">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Text>
+            <Text layoutX="3.0" layoutY="259.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Для того, чтобы добавить данные в таблицу, заполните соответствующие поля на странице и нажмите кнопку &quot;Добавить&quot;. Чтобы изменить или удалить занесенные данные, нажмите на соответствующую строку в таблице, после чего нажмите на появившуюся клавишу &quot;Редактировать&quot; или &quot;Удалить&quot; соответственно." textAlignment="JUSTIFY" wrappingWidth="582.1367301940918" />
+            <Text layoutX="3.0" layoutY="331.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: bold;" text="Рентабельность" textAlignment="CENTER" wrappingWidth="579.7367362976074">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Text>
+            <Text layoutX="3.0" layoutY="505.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: bold;" text="Ликвидность" textAlignment="CENTER" wrappingWidth="579.7367362976074">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Text>
+            <Text layoutX="3.0" layoutY="353.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Для расчета рентабельности компании используются показатели чистой прибыли, активов (для которых и будет посчитана рентабельность), выручки без НДС, собственного капитала и вложенных средств." textAlignment="JUSTIFY" wrappingWidth="580.536693572998" />
+            <Text layoutX="3.0" layoutY="403.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Показатели рентабельности рассчитываются по следующим формулам:" textAlignment="CENTER" wrappingWidth="580.536693572998" />
+            <Text layoutX="3.0" layoutY="418.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: bold;" text="Рентабельность активов = Чистая прибыль / Активы" textAlignment="CENTER" wrappingWidth="580.536693572998" />
+            <Text layoutX="3.0" layoutY="436.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: bold;" text="Рентабельность продаж = Чистая прибыль / Выручка без НДС" textAlignment="CENTER" wrappingWidth="580.536693572998" />
+            <Text layoutX="3.0" layoutY="455.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: bold;" text="Рентабельность собственного капитала = Чистая прибыль / Собственный капитал" textAlignment="CENTER" wrappingWidth="580.536693572998" />
+            <Text layoutX="3.0" layoutY="475.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: bold;" text="Рентабельность инвестиций = Чистая прибыль / Вложенные средства" textAlignment="CENTER" wrappingWidth="580.536693572998" />
+            <Text layoutX="3.0" layoutY="525.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Для расчета ликвидности компании используются показатели высоколиквидных активов (А1), быстрореализуемых активов А2, медленнореализуемых активов А3 и труднореализуемых активов А4, а также наиболее срочных обязательств П1, среднесрочных обязательсв П2, долгосрочных обязательств П3 и постоянных пассивов П4." textAlignment="JUSTIFY" wrappingWidth="580.536693572998" />
+            <Text layoutX="3.0" layoutY="595.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Показатели ликвидности рассчитываются по следующим формулам:" textAlignment="CENTER" wrappingWidth="580.536693572998" />
+            <Text layoutX="3.0" layoutY="613.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: bold;" text="Текущая ликвидность = А1 + А2 - (П1 + П2)" textAlignment="CENTER" wrappingWidth="580.536693572998" />
+            <Text layoutX="3.0" layoutY="630.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: bold;" text="Перспективная ликвидность = А3 - П3" textAlignment="CENTER" wrappingWidth="580.536693572998" />
+            <Text layoutX="3.0" layoutY="647.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: bold;" text="Коэффициент абсолютной ликвидности = А1 / (П1 + П2)" textAlignment="CENTER" wrappingWidth="580.536693572998" />
+            <Text layoutX="3.0" layoutY="664.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: bold;" text="Коэффициент быстрой ликвидности = (А1 + А2) / (П1 + П2)" textAlignment="CENTER" wrappingWidth="580.536693572998" />
+            <Text layoutX="3.0" layoutY="682.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: bold;" text="Коэффициент текущей ликвидности = (А1 + А2 + А3) / (П1 + П2)" textAlignment="CENTER" wrappingWidth="580.536693572998" />
+            <Text layoutX="3.0" layoutY="704.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: bold;" text="Состояние баланса" textAlignment="JUSTIFY" wrappingWidth="580.536693572998" />
+            <Text layoutX="118.0" layoutY="704.0" strokeType="OUTSIDE" strokeWidth="0.0" text="анализируется исходя из следующих неравенств:" wrappingWidth="463.63172912597656" />
+            <Text layoutX="3.0" layoutY="721.0" strokeType="OUTSIDE" strokeWidth="0.0" text="А1 &gt; П1" textAlignment="CENTER" wrappingWidth="582.1366691589355" />
+            <Text layoutX="3.0" layoutY="737.0" strokeType="OUTSIDE" strokeWidth="0.0" text="А2 &gt; П2" textAlignment="CENTER" wrappingWidth="582.1366691589355" />
+            <Text layoutX="3.0" layoutY="755.0" strokeType="OUTSIDE" strokeWidth="0.0" text="А3 &gt; П3" textAlignment="CENTER" wrappingWidth="582.1366691589355" />
+            <Text layoutX="3.0" layoutY="771.0" strokeType="OUTSIDE" strokeWidth="0.0" text="А4 &lt;= П4" textAlignment="CENTER" wrappingWidth="582.1366691589355" />
+            <Text layoutX="3.0" layoutY="793.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Если все неравенства выполняются, баланс считается абсолютно ликвидным." wrappingWidth="535.2034015655518" />
+         </children></AnchorPane>
+  </content>
+</ScrollPane>

@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="850.0" prefWidth="1540.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.ProfitWindowController">
+   <children>
+      <ScrollPane layoutY="92.0" prefHeight="750.0" prefWidth="1540.0">
+        <content>
+          <AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="1160.0" prefWidth="1523.0">
+               <children>
+                  <TableView fx:id="capitalTable" layoutX="32.0" layoutY="91.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="382.0" prefWidth="722.0" AnchorPane.leftAnchor="32.0">
+                     <columns>
+                        <TableColumn fx:id="yearColumn" minWidth="47.199995040893555" prefWidth="64.0" text="Год" />
+                        <TableColumn fx:id="netProfitColumn" prefWidth="116.0" text="Чистая прибыль" />
+                        <TableColumn fx:id="RWVATColumn" prefWidth="130.0" text="Выручка без НДС" />
+                        <TableColumn fx:id="activesColumn" prefWidth="97.0" text="Активы" />
+                        <TableColumn fx:id="netWorthColumn" prefWidth="161.0" text="Собственный капитал" />
+                        <TableColumn fx:id="investedFundsColumn" prefWidth="151.0" text="Вложенные средства" />
+                     </columns>
+                  </TableView>
+                  <TextField fx:id="netProfit" layoutX="96.0" layoutY="500.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="26.0" prefWidth="116.0" promptText="Чистая прибыль" />
+                  <ChoiceBox fx:id="year" layoutX="32.0" layoutY="500.0" prefHeight="26.0" prefWidth="64.0" AnchorPane.leftAnchor="32.0" />
+                  <TextField fx:id="actives" layoutX="342.0" layoutY="500.0" prefHeight="26.0" prefWidth="97.0" promptText="Активы" />
+                  <TextField fx:id="RWVAT" layoutX="212.0" layoutY="500.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="26.0" prefWidth="130.0" promptText="Выручка без НДС" />
+                  <Button fx:id="capitalButton" layoutX="271.0" layoutY="535.0" mnemonicParsing="false" onAction="#CapitalButtonClicked" prefHeight="59.0" prefWidth="228.0" style="-fx-background-color: #80ce50;" text="Добавить" />
+                  <TableView fx:id="profitTable" layoutX="23.0" layoutY="697.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="407.0" prefWidth="722.0" AnchorPane.leftAnchor="32.0" AnchorPane.rightAnchor="763.0">
+                     <columns>
+                        <TableColumn fx:id="profitYearColumn" minWidth="74.13327026367188" prefWidth="56.0" text="Год" />
+                        <TableColumn fx:id="ROSColumn" prefWidth="143.46673583984375" text="Продажи" />
+                        <TableColumn fx:id="ROIColumn" prefWidth="152.0" text="Инвестиции" />
+                        <TableColumn fx:id="ROEColumn" prefWidth="205.33334350585938" text="Собственный капитал" />
+                        <TableColumn fx:id="ROAColumn" prefWidth="170.0" text="Активы" />
+                     </columns>
+                  </TableView>
+                  <TextField fx:id="netWorth" layoutX="437.0" layoutY="500.0" prefHeight="26.0" prefWidth="161.0" promptText="Собственный капитал" />
+                  <TextField fx:id="investedFunds" layoutX="600.0" layoutY="500.0" prefHeight="26.0" prefWidth="151.0" promptText="Вложенные средства" />
+                  <Text fx:id="errortextCapital" fill="RED" layoutX="39.0" layoutY="490.0" strokeType="OUTSIDE" strokeWidth="0.0" text="errortextCapital" textAlignment="CENTER" visible="false" wrappingWidth="725.0700531005859" AnchorPane.leftAnchor="32.0">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="229.0" layoutY="59.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Показатели рентабельности" textAlignment="CENTER" wrappingWidth="321.8700714111328" AnchorPane.leftAnchor="229.0">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Text>
+                  <LineChart fx:id="profitChart" layoutX="798.0" layoutY="668.0" prefHeight="458.0" prefWidth="722.0" title="График изменения показателей рентабельности" AnchorPane.leftAnchor="798.0" AnchorPane.rightAnchor="22.0">
+                    <xAxis>
+                      <CategoryAxis side="BOTTOM" />
+                    </xAxis>
+                    <yAxis>
+                      <NumberAxis side="LEFT" />
+                    </yAxis>
+                  </LineChart>
+                  <Text fx:id="errortextCapital11" layoutX="232.0" layoutY="675.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Рентабельность компании" textAlignment="CENTER" wrappingWidth="321.8700714111328">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Text>
+                  <Text fx:id="errorTextHidePane" layoutX="888.0" layoutY="891.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Невозможно отобразить график" AnchorPane.leftAnchor="888.0" AnchorPane.rightAnchor="95.85039062500005">
+                     <font>
+                        <Font size="36.0" />
+                     </font>
+                  </Text>
+                  <Button fx:id="deleteCapitalButton" disable="true" layoutX="437.0" layoutY="535.0" mnemonicParsing="false" onAction="#DeleteCapitalButtonClicked" prefHeight="59.0" prefWidth="130.0" style="-fx-background-color: #f26065;" text="Удалить" visible="false" />
+                  <Button fx:id="editCapitalButton" disable="true" layoutX="221.0" layoutY="535.0" mnemonicParsing="false" onAction="#EditCapitalButtonClicked" prefHeight="59.0" prefWidth="130.0" style="-fx-background-color: #f9b331;" text="Редактировать" visible="false" />
+                  <GridPane layoutX="817.0" layoutY="101.0" prefHeight="384.0" prefWidth="676.0">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Принцип расчета рентабельности" textAlignment="CENTER" wrappingWidth="677.0383453369141">
+                           <font>
+                              <Font size="36.0" />
+                           </font>
+                        </Text>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Рентабельность продаж = Чистая прибыль / Выручка без НДС" wrappingWidth="585.0697746276855" GridPane.rowIndex="1">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Text>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Рентабельность инвестиций = Чистая прибыль / Вложенные средства" wrappingWidth="584.2700309753418" GridPane.rowIndex="2">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Text>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Рентабельность собственного капитала = Чистая прибыль / Собственный капитал" wrappingWidth="517.0699577331543" GridPane.rowIndex="3">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Text>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Рентабельность активов = Чистая прибыль / Активы" wrappingWidth="455.2032585144043" GridPane.rowIndex="4">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </GridPane>
+               </children>
+            </AnchorPane>
+        </content>
+      </ScrollPane>
+      <ToolBar fx:id="toolbar" prefHeight="100.0" prefWidth="1540.0" style="-fx-background-color: #4545e0;">
+         <items>
+            <Button fx:id="toolbarInfo" mnemonicParsing="false" onAction="#InfoButtonClicked" prefHeight="100.0" prefWidth="130.0" style="-fx-background-color: #4545e0; -fx-border-color: white;" text="Справка" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Button>
+            <Pane prefHeight="100.0" prefWidth="219.0" />
+            <Button fx:id="liquidityButton" mnemonicParsing="false" onAction="#LiquidityButtonClicked" prefHeight="100.0" prefWidth="220.0" style="-fx-background-color: #4545e0; -fx-border-color: white;" text="Ликвидность" textFill="WHITE">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Button>
+            <Button fx:id="profitButton" mnemonicParsing="false" onAction="#ProfitButtonClicked" prefHeight="100.0" prefWidth="220.0" style="-fx-background-color: #4545e0; -fx-border-color: white;" text="Рентабельность" textFill="WHITE">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Button>
+            <Pane prefHeight="100.0" prefWidth="200.0" />
+            <ChoiceBox fx:id="toolbarCompanies" prefHeight="100.0" prefWidth="180.0" style="-fx-border-color: white; -fx-background-color: #4545e0;" />
+            <Label fx:id="toolbarUsername" prefHeight="35.0" prefWidth="146.0" text="| Username" textFill="WHITE">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Button fx:id="toolbarAccount" mnemonicParsing="false" onAction="#AccountButtonClicked" prefHeight="100.0" prefWidth="170.0" style="-fx-background-color: #4545e0; -fx-border-color: white;" text="Аккаунт" textFill="WHITE">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Button>
+         </items>
+      </ToolBar>
+   </children>
+</AnchorPane>

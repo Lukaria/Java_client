@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="850.0" prefWidth="1540.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.UserWindowController">
+   <children>
+      <Text layoutX="500.0" layoutY="340.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Логин">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Text>
+      <Text layoutX="500.0" layoutY="418.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Пароль">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Text>
+      <Text layoutX="500.0" layoutY="589.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Почта" wrappingWidth="76.38507080078125">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Text>
+      <Text layoutX="500.0" layoutY="504.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Имя">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Text>
+      <Label fx:id="loginField" layoutX="600.0" layoutY="312.0" prefHeight="24.0" prefWidth="173.0" text="Login">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label fx:id="passwordField" layoutX="600.0" layoutY="392.0" prefHeight="24.0" prefWidth="173.0" text="Password">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label fx:id="nameField" layoutX="600.0" layoutY="477.0" prefHeight="24.0" prefWidth="173.0" text="Name">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label fx:id="emailField" layoutX="600.0" layoutY="563.0" prefHeight="24.0" prefWidth="173.0" text="Email">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <TableView fx:id="companiesTable" layoutX="1058.0" layoutY="306.0" prefHeight="284.0" prefWidth="284.0" AnchorPane.rightAnchor="198.0">
+        <columns>
+           <TableColumn fx:id="companiesColumn" prefWidth="284.0" text="Компании" />
+
+        </columns>
+      </TableView>
+      <Text layoutX="824.0" layoutY="337.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Добавить компанию">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Text>
+      <TextField fx:id="companyName" layoutX="849.0" layoutY="391.0" onAction="#addCompanyClicked" prefHeight="35.0" prefWidth="174.0" promptText="Название компании" />
+      <Button fx:id="addCompanyButton" layoutX="886.0" layoutY="461.0" mnemonicParsing="false" onAction="#addCompanyClicked" prefHeight="50.0" prefWidth="106.0" style="-fx-background-color: #80ce50;" text="Добавить" />
+      <Text fx:id="errortextEdit" disable="true" fill="RED" layoutX="498.0" layoutY="616.0" strokeType="OUTSIDE" strokeWidth="0.0" text="errortext" visible="false" wrappingWidth="200.0">
+         <font>
+            <Font size="14.0" />
+         </font></Text>
+      <Button fx:id="editButton" layoutX="527.0" layoutY="633.0" mnemonicParsing="false" onAction="#editButtonClicked" prefHeight="50.0" prefWidth="123.0" style="-fx-background-color: #f9b331;" text="Редактировать" />
+      <Button fx:id="exitButton" layoutX="710.0" layoutY="762.0" mnemonicParsing="false" onAction="#ExitButtonClicked" prefHeight="50.0" prefWidth="130.0" style="-fx-background-color: #f26065;" text="Выход" textAlignment="CENTER" />
+      <Text fx:id="errortextCompany" fill="RED" layoutX="878.0" layoutY="441.0" strokeType="OUTSIDE" strokeWidth="0.0" text="errortext" textAlignment="CENTER" visible="false" wrappingWidth="122.93670654296875" />
+      <ToolBar fx:id="toolbar" prefHeight="100.0" prefWidth="1540.0" style="-fx-background-color: #4545e0;">
+         <items>
+            <Button fx:id="toolbarInfo" mnemonicParsing="false" onAction="#InfoButtonClicked" prefHeight="100.0" prefWidth="130.0" style="-fx-background-color: #4545e0; -fx-border-color: white;" text="Справка" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Button>
+            <Pane prefHeight="100.0" prefWidth="219.0" />
+            <Button fx:id="liquidityButton" mnemonicParsing="false" onAction="#LiquidityButtonClicked" prefHeight="100.0" prefWidth="220.0" style="-fx-background-color: #4545e0; -fx-border-color: white;" text="Ликвидность" textFill="WHITE">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Button>
+            <Button fx:id="profitButton" mnemonicParsing="false" onAction="#ProfitButtonClicked" prefHeight="100.0" prefWidth="220.0" style="-fx-background-color: #4545e0; -fx-border-color: white;" text="Рентабельность" textFill="WHITE">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Button>
+            <Pane prefHeight="100.0" prefWidth="200.0" />
+            <ChoiceBox fx:id="toolbarCompanies" prefHeight="100.0" prefWidth="180.0" style="-fx-border-color: white; -fx-background-color: #4545e0;" />
+            <Label fx:id="toolbarUsername" prefHeight="35.0" prefWidth="146.0" text="| Username" textFill="WHITE">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Button fx:id="toolbarAccount" mnemonicParsing="false" onAction="#AccountButtonClicked" prefHeight="100.0" prefWidth="170.0" style="-fx-background-color: #4545e0; -fx-border-color: white;" text="Аккаунт" textFill="WHITE">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Button>
+         </items>
+      </ToolBar>
+      <TextField fx:id="editPassword" disable="true" layoutX="599.0" layoutY="388.0" prefHeight="32.0" prefWidth="174.0" promptText="Password" visible="false">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="editName" disable="true" layoutX="599.0" layoutY="473.0" prefHeight="32.0" prefWidth="174.0" promptText="Name" visible="false">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="editEmail" disable="true" layoutX="599.0" layoutY="558.0" prefHeight="32.0" prefWidth="174.0" promptText="Email" visible="false">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </TextField>
+      <ImageView fx:id="UserImage" fitHeight="284.0" fitWidth="284.0" layoutX="196.0" layoutY="324.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/avatar.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="ImageButton" disable="true" layoutX="196.0" layoutY="324.0" mnemonicParsing="false" onAction="#ImageButtonClicked" opacity="0.0" prefHeight="284.0" prefWidth="284.0" style="-fx-background-color: white; -fx-border-color: black;" />
+   </children>
+</AnchorPane>
